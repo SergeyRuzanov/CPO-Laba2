@@ -1,0 +1,40 @@
+﻿<Window x:Class="Clock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clock"
+        mc:Ignorable="d"
+        Title="Clock" Height="375" Width="850" MinWidth="850" MinHeight="375">
+    <Grid x:Name="grid1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="0.15*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <local:ClockControl x:Name="clockPerm" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="280" Height="280"/>
+            <Label Grid.Row="1" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center">Perm</Label>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="0.15*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <local:ClockControl x:Name="clockMoscow" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="280" Height="280"/>
+            <Label Grid.Row="1" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center">Moscow</Label>
+        </Grid>
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="0.15*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <local:ClockControl x:Name="clockNewYork" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="280" Height="280"/>
+            <Label Grid.Row="1" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center">New York</Label>
+        </Grid>
+    </Grid>
+</Window>
